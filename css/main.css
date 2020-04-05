@@ -318,14 +318,14 @@ footer p {
         display: flex; justify-content: center; align-content: center;
     }
     .now-right {
-        position: absolute; right: 5%; top: 2%;
-        width: 36%; height: 43%;
+        position: absolute; right: 10%; top: 2%;
+        height: 43%; max-width: 30%;
 
     }
     .now-right2 {
-        position: absolute; right: 5%; top: 45%;
+        position: absolute; right: 10%; top: 45%;
         display: flex; flex-direction: column;
-        height: 55%; max-width: 36%;
+        height: 43%; max-width: 30%;
         padding-right: 1%; margin: 1%;
     }
 
