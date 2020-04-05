@@ -230,6 +230,7 @@ footer p {
     }
     #center-column {
         margin: 2% 5% 0;
+        max-width: 90%;
     }
 }
 
