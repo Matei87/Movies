@@ -1,0 +1,489 @@
+/*General*/
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    padding: 0; margin: 0;
+    height: 100%;
+}
+body {
+    padding: 0; margin: 0;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    min-height: 100%;
+    background-color: rgba(33, 37, 41, 1);
+}
+header {
+    display: flex; justify-content: left; align-items: center;
+    padding: 0; margin: 0;
+    width: 100%;  height: 80px;
+    background-color: rgba(20, 22, 33, 0.9);
+    text-align: left;
+}
+
+header h1 {
+    margin-left: 20%;
+    display: block; padding: 0;
+    font-weight: 800;
+}
+header h1 a {
+    color: #00d2ff;
+}
+header h1 a:hover { color: #00d2ff;
+    padding: 0; margin: 0;
+}
+#output {
+    color: greenyellow;
+    text-align: left;
+    padding-left: 10%;
+    background: linear-gradient(to bottom, darkred, rgba(0, 0, 0, 0.7));
+}
+
+form {
+    background-color: rgba(20, 22, 33, 0.6);
+    text-align: center;
+    margin: 0; padding: 0;
+    width: 100%;
+    display: flex; justify-content: left;
+}
+.form-group {
+    color: #495057; background-color: darkgrey;
+    width: 850px; border-radius: 20px;
+    padding: 0; margin: 20px 20px 20px 25%;
+    display: flex; justify-content: left; align-content: center;
+}
+#inputValue::placeholder {
+    color: #495057;
+}
+#inputValue {
+    color: white; background: transparent;
+    border: none;
+    padding: 0; margin: 0 0 0 5%;
+    width: calc(100% - 40px);
+    font-size: 1rem; font-weight: 400; text-transform: capitalize;
+}
+#search {
+    display: flex; justify-content: center; align-items: center;
+    border: none; outline: none;
+    padding: 10px; margin: 0;
+    color: white; background-color: #00d2ff;
+    font-weight: 400;  border-radius: 20px;
+    text-align: center; cursor: pointer;
+    width: 40px; height: 40px;
+}
+#search .fa-search { font-size: 16px;
+    width: 25px; height: 25px;
+    padding: 5px;
+    display: flex; justify-content: center; align-items: center;
+}
+#resultat {
+    text-align: left; width: 100%;
+    font-size: 30px;
+    color: #00d2ff;
+    margin-left: 20%; margin-top: 1%; margin-bottom: 1%;
+ }
+
+.first-result {
+    width: 100%; height: 100%;
+    padding: 0; margin: 0;
+}
+.first-background {
+    padding: 0; margin: 0;
+    background-size: 100%, cover !important;
+    background-position: center, center !important;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    animation: animateMovieimage 1s ease;
+}
+@keyframes animateMovieimage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.first-result-text {
+    color: #fff; max-width: 700px; max-height: 100px;
+    position: absolute; bottom: 200px; left: 25%;
+    margin-right: 20px;
+}
+.first-result-text h1 { margin: 0;
+    font-size: 48px;
+}
+.first-result-text p { margin: 0;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+/*Movie Search Container*/
+#movies-searchable {
+    margin: 0 auto;
+    display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+}
+.chit-chat {
+    margin: 5px;
+    display: inline; position: relative;
+    height: 300px; width: 360px;
+    border: 2px solid grey;
+    box-shadow: 0 2px 8px rgba(238,238,238, 1);
+}
+.image-poster {
+    position: absolute; left: 0; top: 0;
+    width: 200px; height: 100%;
+}
+.right {
+    position: absolute; right: 0; top: 2%;
+    width: 42%; height: 43%;
+}
+.right2 {
+    position: absolute; right: 0; top: 45%;
+    display: flex; flex-direction: column;
+    height: 55%;
+    width: 42%;  padding-right: 1%;
+}
+.title {
+    font-weight: 600;
+    font-size: 16px; color: white;
+    width: 140px; padding: 0; margin-bottom: 1%;
+}
+.an {
+    color: #00d2ff;
+    border: 3px inset rgba(0, 82.4, 100, 0.5); padding: 0;
+}
+.view-more {
+    width: 80px; height: 20px;
+    color: #00d2ff;
+    margin: 5% 0 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.view-more a {
+    width: 100%;
+}
+.view-more a:hover {
+    cursor: pointer;
+}
+.view-more a:hover,  .view-more a:visited {
+    text-decoration: none;
+    outline: none;
+}
+.plot {
+    color: white; font-size: 14px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 145px;
+    height: 50%;
+}
+
+
+/*Popular Movies Container*/
+#popular-resultat {
+    text-align: left; width: 100%;
+    font-size: 30px;
+    color: #00d2ff;
+    margin-left: 25%; margin-top: 1%; margin-bottom: 1%;
+}
+#movies-popular {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; align-items: center; flex-wrap: wrap;
+}
+
+.popular-chit-chat {
+    margin: 5px;
+    display: inline; position: relative;
+    height: 300px; width: 360px;
+    border: 2px solid grey;
+    box-shadow: 0 2px 8px rgba(238,238,238, 1);
+}
+.popular-image-poster {
+    position: absolute; left: 0; top: 0;
+    width: 200px; height: 100%;
+}
+.popular-right {
+    position: absolute; right: 0; top: 2%;
+    width: 42%; height: 43%;
+}
+.popular-right2 {
+    position: absolute; right: 0; top: 45%;
+    display: flex; flex-direction: column;
+    height: 55%;
+    width: 42%;  padding-right: 1%;
+}
+.popular-title {
+    font-weight: 600;
+    font-size: 16px; color: white;
+    width: 140px; padding: 0; margin-bottom: 1%;
+}
+.popular-an {
+    color: #00d2ff;
+    border: 3px inset rgba(0, 82.4, 100, 0.5); padding: 0;
+}
+.popular-plot {
+    color: white; font-size: 14px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 145px;
+    height: 50%;
+}
+
+
+/*Now Playing Movies Container*/
+#nowPlaying {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; align-items: center; flex-wrap: wrap;
+}
+h1#nowPlaying-resultat {
+    text-align: left; width: 100%;
+    font-size: 30px;
+    color: #00d2ff;
+    margin-left: 25%; margin-top: 1%; margin-bottom: 1%;
+}
+.now-chit-chat {
+    margin: 5px;
+    display: inline; position: relative;
+    height: 300px; width: 360px;
+    border: 2px solid grey;
+    box-shadow: 0 2px 8px rgba(238,238,238, 1);
+}
+.now-image-poster {
+    position: absolute; left: 0; top: 0;
+    width: 200px; height: 100%;
+}
+.now-right {
+    position: absolute; right: 0; top: 2%;
+    width: 42%; height: 43%;
+}
+.now-right2 {
+    position: absolute; right: 0; top: 45%;
+    display: flex; flex-direction: column;
+    height: 55%;
+    width: 42%;  padding-right: 1%;
+}
+.now-title {
+    font-weight: 600;
+    font-size: 16px; color: white;
+    width: 140px; padding: 0; margin-bottom: 1%;
+}
+.now-an {
+    color: #00d2ff;
+    border: 3px inset rgba(0, 82.4, 100, 0.5); padding: 0;
+}
+.now-plot {
+    color: white; font-size: 14px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    width: 145px;
+    height: 50%;
+}
+
+
+
+/* Footer */
+footer {
+    display: flex; justify-content: center; align-items: center;
+    position: relative; bottom: 0; left: 0; right: 0;
+    padding: 0; margin: 0;
+    width: 100%; height: 60px;
+    background-color: rgba(20, 22, 33, 1);
+}
+
+footer p {
+    color: darkgrey;
+    padding: 0; margin: 0;
+}
+
+
+/* Media Queries*/
+
+/* Extra small*/
+@media (max-width: 575.98px) {
+    .first-result-text {
+        max-width: 700px; max-height: 100px;
+        position: absolute; bottom: 120px; left: 5%;
+        margin-right: 20px;
+    }
+    .first-result-text h1 { margin: 0;
+        font-size: 30px;
+    }
+    .first-result-text p { margin: 0;
+        font-size: 16px;
+        line-height: normal;
+    }
+    .form-group { width: 100%;
+        max-width: 850px; border-radius: 20px;
+        padding: 0;
+        margin: 20px;
+        display: flex; justify-content: center; align-content: center;
+    }
+
+    #inputValue {
+        color: white; background: transparent;
+        border: none;
+        padding: 0; margin: 0 0 0 5%;
+        width: calc(100% - 40px);
+        font-size: 1rem; font-weight: 400; text-transform: capitalize;
+    }
+
+    #nowPlaying {
+        padding: 0; margin-left: 5%;
+        /*margin: 0 auto;*/
+        display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
+    }
+
+    #nowPlaying h1#nowPlaying-resultat {
+        text-align: left; width: 100%;
+        font-size: 26px;
+        color: #00d2ff;
+        margin-left: 5%; margin-top: 1%; margin-bottom: 1%;
+    }
+    #movies-popular {
+        padding: 0; margin-left: 5%;
+        /*margin: 0 auto;*/
+        display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
+    }
+    #movies-popular h1#popular-resultat {
+        text-align: left; width: 100%;
+        font-size: 26px;
+        color: #00d2ff;
+        margin-left: 5%; margin-top: 1%; margin-bottom: 1%;
+    }
+}
+
+/* Small*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .first-result-text {
+        max-width: 700px; max-height: 100px;
+        position: absolute; bottom: 100px; left: 5%;
+        margin-right: 20px;
+    }
+    .first-result-text h1 { margin: 0;
+        font-size: 30px;
+    }
+    .first-result-text p { margin: 0;
+        font-size: 16px;
+        line-height: normal;
+    }
+    .form-group { width: 100%;
+        max-width: 850px; border-radius: 20px;
+        padding: 0;
+        margin: 20px;
+        display: flex; justify-content: center; align-content: center;
+    }
+
+    #inputValue {
+        color: white; background: transparent;
+        border: none;
+        padding: 0; margin: 0 0 0 5%;
+        width: calc(100% - 40px);
+        font-size: 1rem; font-weight: 400; text-transform: capitalize;
+    }
+    #nowPlaying {
+        padding: 0; margin-left: 5%;
+        display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+    }
+
+    #nowPlaying h1#nowPlaying-resultat {
+        text-align: left; width: 100%;
+        font-size: 26px;
+        color: #00d2ff;
+        margin-left: 5%; margin-top: 1%; margin-bottom: 1%;
+    }
+    #movies-popular {
+        padding: 0; margin-left: 5%;
+        display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+    }
+    #movies-popular h1#popular-resultat {
+        text-align: left; width: 100%;
+        font-size: 26px;
+        color: #00d2ff;
+        margin-left: 5%; margin-top: 1%; margin-bottom: 1%;
+    }
+}
+
+/* Medium*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .first-result-text {
+        max-width: 700px; max-height: 100px;
+        position: absolute; bottom: 150px; left: 5%;
+        margin-right: 20px;
+    }
+    .first-result-text h1 { margin: 0;
+        font-size: 30px;
+    }
+    .first-result-text p { margin: 0;
+        font-size: 20px;
+        line-height: normal;
+    }
+    .form-group { width: 100%;
+        max-width: 850px; border-radius: 20px;
+        padding: 0;
+        margin: 20px 20px 20px 5%;
+        display: flex; justify-content: center; align-content: center;
+    }
+
+    #nowPlaying {
+        padding: 0; margin-left: 5%;
+        /*margin: 0 auto;*/
+        display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
+    }
+
+    #nowPlaying h1#nowPlaying-resultat {
+        text-align: left; width: 100%;
+        color: #00d2ff;
+        margin-left: 5%;
+        margin-top: 1%; margin-bottom: 1%;
+    }
+    #movies-popular {
+        padding: 0; margin-left: 5%;
+        /*margin: 0 auto;*/
+        display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
+    }
+    #movies-popular h1#popular-resultat {
+        text-align: left; width: 100%;
+        color: #00d2ff;
+        margin-left: 5%; margin-top: 1%; margin-bottom: 1%;
+    }
+}
+
+/*Large*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .first-result-text {
+        max-width: 700px; max-height: 100px;
+        position: absolute; bottom: 150px; left: 10%;
+        margin-right: 20px;
+    }
+    .first-result-text h1 { margin: 0;
+        font-size: 30px;
+    }
+    .first-result-text p { margin: 0;
+        font-size: 20px;
+        line-height: normal;
+    }
+    .form-group { width: 100%;
+        max-width: 850px; border-radius: 20px;
+        padding: 0; margin: 20px 20px 20px 10%;
+        display: flex; justify-content: center; align-content: center;
+    }
+
+    #nowPlaying {
+        padding: 0; margin-left: 10%;
+        display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
+    }
+
+    #nowPlaying h1#nowPlaying-resultat {
+        text-align: left; width: 100%;
+        color: #00d2ff;
+        margin-left: 0; margin-top: 1%; margin-bottom: 1%;
+    }
+    #movies-popular {
+        padding: 0; margin-left: 10%;
+        display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
+    }
+    #movies-popular h1#popular-resultat {
+        text-align: left; width: 100%;
+        color: #00d2ff;
+        margin-left: 0; margin-top: 1%; margin-bottom: 1%;
+    }
+}

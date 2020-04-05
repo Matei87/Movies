@@ -1,0 +1,282 @@
+/* General */
+a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    padding: 0; margin: 0;
+    height: 100%; width: 100%;
+}
+body {
+    padding: 0; margin: 0;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    min-height: 100%; width: 100%;
+    background-color: rgba(33, 37, 41, 1); color: white;
+}
+
+/* Navigation - title */
+.navigation {
+    display: flex; justify-content: left; align-items: center;
+    padding: 0; margin: 0;
+    width: 100%;  height: 80px;
+    background-color: rgba(20, 22, 33, 0.9);
+    text-align: left;
+}
+.navigation h1 {
+    margin-left: 20%;
+    display: block; padding: 0;
+    font-weight: 800;
+}
+.navigation h1 a {
+    color: #00d2ff;
+}
+.navigation h1 a:hover {
+    color: #00d2ff;
+    padding: 0; margin: 0;
+}
+/* Navigation 2 */
+#movie {
+    width: 100%;
+    height: 60px;
+    background: #1c1c1c;
+    display: flex; justify-content: left; align-items: center;
+    font-size: 20px;
+}
+#movie a {
+    color: ghostwhite; margin-left: 21%;
+}
+#movie #name {
+    color: white; font-size: 20px;
+}
+
+/* Content */
+#media { padding: 0; margin: 0 auto;
+    width: 100%; height: 100%;
+    background-color: white;
+    position: relative;
+}
+#content {
+    height: 100%; width: 100%;
+    padding: 1% 0 0; margin: 0 auto;
+    position: relative;
+    background-color: rgba(33, 37, 41, 1); color: white;
+}
+
+#media #content #left-column {
+    height: 100%; max-width: 300px;
+    color: white;
+    padding: 0; margin-right: 2%;
+}
+#content #left-column-picture img {
+    border-radius: 5px;
+}
+#content #left-column #detalii {
+    display: block;
+}
+#content #left-column #detalii div{
+    margin-top: 3%;
+}
+#content #left-column #detalii div p {
+    margin: 0; padding: 0;
+    font-size: 18px; font-weight: 600; line-height: 1;
+}
+#content #left-column #detalii div span {
+    margin: 0; padding: 0; line-height: 0;
+}
+#content #left-column #detalii div span a {
+    color: white;
+}
+#content #left-column #detalii div span a:hover {
+    color: #00d2ff;
+}
+#content #left-column #detalii .alsoknown {
+   display: flex; justify-items: center; flex-direction: column;
+}
+#content #left-column #detalii .alsoknown p:first-child{
+    display: flex; flex-direction: column;
+    width: 100%;
+}
+#content #left-column #detalii ul {
+    margin: 0; padding: 0; width: 300px;
+    list-style-type: none;
+    display: flex; justify-content: left;  flex-wrap: wrap;
+}
+#content #left-column #detalii .alsoknown ul li {
+    margin-bottom: 0; margin-top: 8px;
+    display: flex;   justify-content: left;  align-items: center; flex-wrap: wrap;
+}
+
+.known-for {
+    margin-top: 2%;
+}
+.known-for-scrolabble ul {
+    padding: 0; margin: 0;
+    /*border: 2px solid white;*/
+    animation: animateMovieinfo 1s;
+}
+@keyframes animateMovieinfo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.known-for-scrolabble p {
+    font-size: 18px; font-weight: 600;
+}
+.known-for-scrolabble p:last-of-type {
+    margin-top: 2%;
+}
+.known-for-scrolabble li a {
+    border: 2px solid grey; box-shadow: 0 2px 8px rgba(238,238,238, 1); margin: 4px;
+}
+.known-for-scrolabble li#moviez { margin: 0; padding: 0;
+    overflow-x: scroll; overflow-y: hidden;
+    list-style-type: none; display: flex;
+    width: 100%; height: 320px;
+}
+.known-for-scrolabble li#moviez a {
+    display: inline-block;
+}
+
+.known-for-scrolabble li#moviez img { display: block;
+    width: 150px; margin-left: 1%;
+    height: 250px;
+}
+
+#moviez p.movie-title {
+    font-size: 12px; text-align: center; color: #00d2ff;
+    margin-left: 1%;
+}
+
+.known-for-scrolabble li#crewz {
+    margin: 0; padding: 0;
+    overflow-x: scroll; overflow-y: hidden;
+    list-style-type: none; display: flex;
+    width: 100%; height: 320px;
+}
+.known-for-scrolabble li#crewz a {
+    display: inline-block;
+}
+
+.known-for-scrolabble li#crewz img { display: block;
+    width: 150px; margin-left: 1%;
+    height: 250px;
+}
+
+#crewz p.movie-title {
+    font-size: 12px; text-align: center; color: #00d2ff;
+    margin-left: 1%;
+}
+#crewz p.crewz-title {
+    font-size: 12px; text-align: center; color: #00d2ff;
+    margin-left: 1%;
+}
+#crewz a:hover {
+    cursor: pointer;
+}
+#crewz img {
+    border-radius: 5px;
+}
+
+
+#moviez a:hover {
+    cursor: pointer;
+}
+#moviez img {
+    border-radius: 5px;
+}
+
+/* Center Column */
+ #center-column {
+    height: 100%; max-width: 71%;
+    margin: 0; padding: 0;
+}
+
+#center-column .title {
+    font-weight: 700; font-size: 35px; margin-bottom: 2%;
+}
+#center-column h3 {
+    font-weight: 600; font-size: 20px;
+}
+
+
+/* Footer */
+footer {
+    display: flex; justify-content: center; align-items: center;
+    position: relative; bottom: 0; left: 0; right: 0;
+    padding: 0; margin: 0;
+    width: 100%; height: 60px;
+    background-color: rgba(20, 22, 33, 1);
+}
+
+footer p {
+    color: darkgrey;
+    padding: 0; margin: 0;
+}
+
+
+/* Media Queries*/
+
+/* Extra small*/
+@media (max-width: 575.98px) {
+    .movieinfo-content {
+        display: none;
+    }
+    #left-column {
+       padding: 0; margin: 0 20% 0;
+
+    }
+    #center-column { max-width: 90%;
+        padding: 0; margin: 2% 5% 0;
+    }
+}
+
+/* Small*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .movieinfo-poster {
+        display: none;
+    }
+    #over .row:nth-of-type(2) {
+        width: 95%;
+        left: 5%;
+    }
+    #left-column {
+        position: relative;
+    }
+    #left-column #left-column-details {
+         position: absolute; top: 1%; left: 105%;
+         width: 235px; padding: 0; margin: 0;
+    }
+    #content #left-column #detalii .alsoknown {
+        display: none;
+    }
+    #left-column #left-column-details h4 {
+        font-size: 30px; font-weight: 700;
+    }
+    #center-column {
+        max-width: 100%;
+    }
+}
+
+/* Medium*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #left-column {
+        height: 100%; max-width: 200px;
+        padding: 0; margin: 0;
+    }
+    #center-column {
+        height: 100%; max-width: 56%;
+        margin: 0; padding: 0;
+    }
+}
+
+/*Large*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    #center-column {
+        height: 100%; max-width: 66%;
+        margin: 0; padding: 0;
+    }
+}
