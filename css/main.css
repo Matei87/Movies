@@ -369,6 +369,23 @@ footer p {
         color: #00d2ff;
         margin-left: 5%; margin-top: 1%; margin-bottom: 1%;
     }
+     .popular-right {
+        position: absolute; right: 15%; top: 2%; left: 63%;
+        height: 43%; max-width: 35%;
+        margin: 0;
+    }
+    .popular-title {
+        max-width: 115px;
+    }
+    .popular-right2 {
+        position: absolute; right: 15%; top: 45%; left: 63%;
+        display: flex; flex-direction: column;
+        height: 55%; max-width: 35%;
+        margin: 0;
+    }
+    .popular-plot {
+        max-width: 110px;
+    }
 }
 
 /* Small*/
