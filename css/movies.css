@@ -349,4 +349,7 @@ footer p {
         width: 95%;
         left: 5%;
     }
+    .movieinfo-text2 .revenue {
+        margin-left: 5%;
+    }
 }
