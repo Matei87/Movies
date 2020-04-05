@@ -317,16 +317,25 @@ footer p {
         margin: 20px;
         display: flex; justify-content: center; align-content: center;
     }
-    .now-right {
-        position: absolute; right: 10%; top: 2%;
-        height: 43%; max-width: 30%;
-
+     .now-right {
+        position: absolute; right: 15%; top: 2%; left: 63%;
+        height: 43%; max-width: 35%;
+        margin: 0;
+    }
+    .now-title {
+        max-width: 115px;
     }
     .now-right2 {
-        position: absolute; right: 10%; top: 45%;
+        position: absolute; right: 15%; top: 45%; left: 63%;
         display: flex; flex-direction: column;
-        height: 43%; max-width: 30%;
-        padding-right: 1%; margin: 1%;
+        height: 55%; max-width: 35%;
+        margin: 0;
+    }
+    .now-plot {
+        max-width: 110px;
+    }
+    .view-more {
+        margin-top: 10%;
     }
 
     #inputValue {
