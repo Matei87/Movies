@@ -348,7 +348,6 @@ footer p {
 
     #nowPlaying {
         padding: 0; margin-left: 5%;
-        /*margin: 0 auto;*/
         display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
     }
 
@@ -360,7 +359,6 @@ footer p {
     }
     #movies-popular {
         padding: 0; margin-left: 5%;
-        /*margin: 0 auto;*/
         display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
     }
     #movies-popular h1#popular-resultat {
@@ -462,7 +460,6 @@ footer p {
 
     #nowPlaying {
         padding: 0; margin-left: 5%;
-        /*margin: 0 auto;*/
         display: flex; justify-content: left; align-items: center; flex-wrap: wrap;
     }
 
