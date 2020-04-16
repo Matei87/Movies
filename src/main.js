@@ -161,10 +161,3 @@ function movieContainerNow(movies){
 
     return nowPlayingResultat + output;
 }
-
-
-
-
-
-
-
