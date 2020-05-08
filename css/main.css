@@ -186,8 +186,8 @@ form {
     margin-left: 25%; margin-top: 1%; margin-bottom: 1%;
 }
 #movies-popular {
-    margin: 0 auto;
-    display: flex;
+    margin-bottom: 1%;
+    display: flex; 
     justify-content: center; align-items: center; flex-wrap: wrap;
 }
 
@@ -231,7 +231,6 @@ form {
 
 /*Now Playing Movies Container*/
 #nowPlaying {
-    margin: 0 auto;
     display: flex;
     justify-content: center; align-items: center; flex-wrap: wrap;
 }
