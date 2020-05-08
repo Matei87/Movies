@@ -58,7 +58,7 @@ body {
 }
 #content {
     height: 100%; width: 100%;
-    padding: 1% 0 0; margin: 0 auto;
+    padding: 1% 0 0; margin: 1% auto;
     position: relative;
     background-color: rgba(33, 37, 41, 1); color: white;
 }
@@ -68,6 +68,11 @@ body {
     color: white;
     padding: 0; margin-right: 2%;
 }
+
+#media #content #left-column-details {
+    margin-top: 1%;
+}
+
 #content #left-column-picture img {
     border-radius: 5px;
 }
@@ -229,7 +234,7 @@ footer p {
         margin: 2% 5% 0;
     }
     #center-column {
-        margin: 2% 5% 0;
+        margin: 2% 5% 2%;
         max-width: 90%;
     }
 }
