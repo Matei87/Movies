@@ -9,9 +9,9 @@ function movieSelected(id) {
 
 
 function gen(n) {
-    if (n == 2) {
+    if (n === 2) {
         return 'Male';
-    } else if (n == 1) {
+    } else if (n === 1) {
         return 'Female';
     } else {
         return '-';
