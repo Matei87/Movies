@@ -137,21 +137,21 @@ body {
 .known-for-scrolabble li a {
     border: 2px solid grey; box-shadow: 0 2px 8px rgba(238,238,238, 1); margin: 4px;
 }
-.known-for-scrolabble li#moviez { margin: 0; padding: 0;
+.known-for-scrolabble li#movieslist { margin: 0; padding: 0;
     overflow-x: scroll; overflow-y: hidden;
     list-style-type: none; display: flex;
     width: 100%; height: 320px;
 }
-.known-for-scrolabble li#moviez a {
+.known-for-scrolabble li#movieslist a {
     display: inline-block;
 }
 
-.known-for-scrolabble li#moviez img { display: block;
+.known-for-scrolabble li#movieslist img { display: block;
     width: 150px; margin-left: 1%;
     height: 250px;
 }
 
-#moviez p.movie-title {
+#movieslist p.movie-title {
     font-size: 12px; text-align: center; color: #00d2ff;
     margin-left: 1%;
 }
@@ -187,10 +187,10 @@ body {
 }
 
 
-#moviez a:hover {
+#movieslist a:hover {
     cursor: pointer;
 }
-#moviez img {
+#movieslist img {
     border-radius: 5px;
 }
 
