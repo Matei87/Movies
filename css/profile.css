@@ -233,6 +233,14 @@ footer p {
     #left-column {
         margin: 2% 5% 0;
     }
+    #content #left-column-picture  {
+        width: 300px; height: 400px;
+    }
+    #content #left-column-picture img {
+        object-fit: cover; object-position: top;
+        width: 100%; height: 100%;
+        border-radius: 0;
+    }
     #center-column {
         margin: 2% 5% 2%;
         max-width: 90%;
