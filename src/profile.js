@@ -105,10 +105,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     return await Promise.all( [fetchUrl, fetchUrl2])
         .then( (result) => {
-            result.map( (a) => console.log(a) );
             let data = result[0];
             let dats = result[1];
-            //console.log(data, dats);
 
             document.querySelector('#movie').innerHTML = `<a href="index.html">Home /&nbsp</a> <div id="name"> ${data.name}</div>`;
             let alsoknownas = [];
