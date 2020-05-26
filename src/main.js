@@ -1,7 +1,6 @@
 let API_KEY = 'd2f90b385fa2430163392784263021de';
 let POSTER_URL = 'https://image.tmdb.org/t/p/original';
 let url = 'https://api.themoviedb.org/3/search/movie?api_key=d2f90b385fa2430163392784263021de';
-let MOVIE_DB_ENDPOINT = 'https://api.themoviedb.org';
 let MOVIE_BACKDROP_URL = 'https://image.tmdb.org/t/p/w1280';
 
 let searchButton = document.querySelector('#search');
@@ -11,9 +10,7 @@ let firstResult = document.querySelector('.first-result');
 
 let movieSelected = function (id) {
     window.location.href = `movies.html?id=${id}`;
-}
-popularMovies();
-nowPlayingMovies();
+};
 
 function truncateString(str, num) {
     return str && str.length > num ? str.slice(0, num).split(' ').slice(0, -1).join(' ') + '...': str;
@@ -51,42 +48,43 @@ searchButton.addEventListener('click', (event) => {
             document.querySelector('#movies-popular').style.display = "none";
             document.querySelector('#nowPlaying').style.display = "none";
         }
+        
+    async function myFetch() {
+        let newUrl = url + '&query=' + inputValue + '&language=en-US';
+        let res = await fetch(newUrl);
+        let data = await res.json();
+        return data;
+    }
 
-    let ceva = `https://api.themoviedb.org/3/movie/${inputValue}?api_key=${API_KEY}&language=en-US`;
-    let newUrl = url + '&query=' + inputValue + '&language=en-US';
-    let searchResultat = `<h1 id="resultat">Search Result</h1>`;
-    fetch(newUrl)
-        .then((res) => res.json())
-        .then( data => {
+    myFetch()
+        .then( (data) => {
+            let searchResultat = `<h1 id="resultat">Search Result</h1>`;
             moviesSearchable.innerHTML = '';
             let movies = data.results;
             let movieBlock = createMovieContainer(movies);
-           moviesSearchable.innerHTML = searchResultat + movieBlock;
-        })
-        .catch(Error => {
-            console.log(Error);
-        });
-
+            moviesSearchable.innerHTML = searchResultat + movieBlock; })
+        .catch(Error => console.log(Error) );
     //Empty the search field input after the search
       searchInput.value = '';
-})
+});
+
 
 
 //POPULAR MOVIES
-function popularMovies() {
-    let moviesPopular = document.querySelector('#movies-popular');
+async function popularMovies() {
     let popularUrl =  `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US`;
-
-        fetch(popularUrl)
-            .then(res => res.json())
-            .then( data => {
-
-                let movies = data.results;
-                let movieBlock = movieContainerPopular(movies);
-                moviesPopular.innerHTML = movieBlock;
-            })
-            .catch(error => console.log(error))
+    let popularFetch = await fetch(popularUrl);
+    let data = await popularFetch.json();
+    return data;
 }
+
+popularMovies()
+    .then( (data) => {
+        let moviesPopular = document.querySelector('#movies-popular');
+        let movies = data.results;
+        let movieBlock = movieContainerPopular(movies);
+        moviesPopular.innerHTML = movieBlock; })
+    .catch(error => console.log(error));
 
 function movieContainerPopular(movies){
 
@@ -111,34 +109,31 @@ function movieContainerPopular(movies){
 }
 
 //NOW PLAYING MOVIES
-function nowPlayingMovies() {
-    let nowPlaying = document.querySelector('#nowPlaying');
+async function nowPlayingMovies() {
+
     let nowPlayingUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US`;
+    let nowPlayingfetch = await fetch(nowPlayingUrl);
+    let data = await nowPlayingfetch.json();
+    return data;
+}
+nowPlayingMovies()
+    .then( (data) => {
+        let nowPlaying = document.querySelector('#nowPlaying');
+        let rezultate = data.results;
+        let movieBloc = movieContainerNow(rezultate);
+        nowPlaying.innerHTML = movieBloc;
 
-    fetch(nowPlayingUrl)
-        .then( (res) => res.json())
-        .then( data => {
-
-            let rezultate = data.results;
-            let movieBloc = movieContainerNow(rezultate);
-            nowPlaying.innerHTML = movieBloc;
-
-            let firstMovieBlock = function firstMovie(movies){
-                    return ` <div class="first-background" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 39%,rgba(0,0,0,0) 41%,rgba(0,0,0,0.65) 100%), url(${MOVIE_BACKDROP_URL + movies[0].backdrop_path}), #1c1c1c">
+    let firstMovieBlock = function firstMovie(movies){
+        return ` <div class="first-background" style="background: linear-gradient(to bottom, rgba(0,0,0,0) 39%,rgba(0,0,0,0) 41%,rgba(0,0,0,0.65) 100%), url(${MOVIE_BACKDROP_URL + movies[0].backdrop_path}), #1c1c1c">
                                     <div class="first-result-text">
                                         <h1>${movies[0].title}</h1>
                                         <p>${movies[0].overview}</p>
                                     </div>
                             </div>`;
-                };
+    };
 
-            firstResult.innerHTML = firstMovieBlock(rezultate);
-        })
-        .catch(err => {
-            console.log(err);
-        })
-
-}
+    firstResult.innerHTML = firstMovieBlock(rezultate); })
+    .catch(err =>  console.log(err) );
 
 function movieContainerNow(movies){
 
