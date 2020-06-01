@@ -4,6 +4,12 @@ let POSTER = 'https://image.tmdb.org/t/p/original';
 let MOVIE_BACKDROP = 'https://image.tmdb.org/t/p/w1280';
 let profil = 'http://image.tmdb.org/t/p/w300';
 
+function bioSelected(cl) {
+    window.location.href = `profile.html?profile=${cl}`;
+}
+
+$( document ).ready(function() {
+    
 function timeConvert(n){
     if (n){
         let ore = Math.floor(n / 60);
@@ -64,11 +70,6 @@ function posterPath(n){
     }
 }
 
-function bioSelected(cl) {
-    window.location.href = `profile.html?profile=${cl}`;
-}
-
-window.addEventListener("DOMContentLoaded", () => {
     let params = new URLSearchParams(window.location.search);
     let movieId = params.get('id');
 
