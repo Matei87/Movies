@@ -117,7 +117,6 @@ body {
 }
 .known-for-scrolabble ul {
     padding: 0; margin: 0;
-    /*border: 2px solid white;*/
     animation: animateMovieinfo 1s;
 }
 @keyframes animateMovieinfo {
