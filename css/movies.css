@@ -52,6 +52,7 @@ body {
 /* Cover */
 #over {
     padding: 0; margin: 0;
+    background-color: rgba(20, 22, 33, 0.9);
 }
 .movieinfo {
     background-size: cover !important;
