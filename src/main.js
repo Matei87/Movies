@@ -12,6 +12,9 @@ let movieSelected = function (id) {
     window.location.href = `movies.html?id=${id}`;
 };
 
+
+$( document ).ready(function () {
+    
 function truncateString(str, num) {
     return str && str.length > num ? str.slice(0, num).split(' ').slice(0, -1).join(' ') + '...': str;
 }
@@ -156,3 +159,4 @@ function movieContainerNow(movies){
 
     return nowPlayingResultat + output;
 }
+});
