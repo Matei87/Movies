@@ -60,15 +60,6 @@ body {
     height: 600px;
     padding: 40px 20px;
     box-sizing: border-box;
-    animation: animateMovieinfo 1s;
-}
-@keyframes animateMovieinfo {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .movieinfo-content {
