@@ -6,7 +6,7 @@ function movieSelected(id) {
     window.location.href = `movies.html?id=${id}`;
 }
 
-
+$( document ).ready(function() {
 function gen(n) {
     if (n === 2) {
         return 'Male';
@@ -91,9 +91,6 @@ function picturePath(n){
         return profil + n;
     }
 }
-
-
-window.addEventListener("DOMContentLoaded", () => {
 
 (async function(){
     let parameters = new URLSearchParams(window.location.search);
