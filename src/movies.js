@@ -154,7 +154,7 @@ function posterPath(n){
         async function credits() {
             let url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API}`;
             let res = await fetch(url);
-            let data = res.json();
+            let data = await res.json();
             return data;
         }
         credits()
