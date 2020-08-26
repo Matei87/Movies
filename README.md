@@ -7,6 +7,5 @@ Movies is a Javascript website based on TMDB api that shows popular and now play
 * HTML5
 * CSS3
 * Javascript
-* jQuery
 * Bootstrap
 
