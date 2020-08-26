@@ -4,6 +4,13 @@ Movie website based on TMDB api that shows popular and now playing movies in cin
 All movies have a description for the crew, budget, revenue etc.
 Directors, producers and actors from all the movies have a detail page with their biography.
 
+
+#Built with
+* HTML5
+* CSS3
+* Javascript
+* Bootstrap
+
 - I used HTML, CSS for structure and design
 - Fetch to get data in JSON format
 - Javascript for API manipulation
